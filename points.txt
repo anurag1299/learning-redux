@@ -1,0 +1,45 @@
+Def : redux is predictable state container for js apps 
+    -it is for js apps(can be used with A,V or vanilla)
+    -it is a state container(stores of your app)
+    -it is predictable(all state transition are explicit and it is possible to keep track of them ie the changes to app state become predictable)
+
+three basic concepts
+    -store = holds the state of your app
+    -action = describes what happened
+    -reducer = ties the store and actions together
+
+three basic principle
+
+first-
+    the state of your whole app is stored in an object tree within a single store
+    (all state are kept in single object managed by store)
+
+second-
+    the only way to change state is to emit a action, an object describing what happened
+
+three-
+    to specify how the state tree is transformed by actions you write pure reduces
+
+
+@ACTIONS==
+    -the only our app can interact with store
+    -carry some info from your app to redux store
+    -plain js objects
+    -have a 'type' property that indicate the type of actions being performed
+    -the 'type' property is typically defined as string constants
+
+@REDUCER ==
+    -specify how the app state changes in response to action sent to the store
+    -function that accepts state and action as argument and return the next state of app
+    - simple way = (prevState,action) => newState
+
+@STORE == 
+    -one store for entire app
+    responsibilities-
+        -holds app state
+        -allow access to state via getState()
+        -allow state to be updated via dispatch(action)
+        -registers listeners via subscribe(listener)
+        -handles unregistering of listeners via the function returned by subscribe(listener)
+        
+
