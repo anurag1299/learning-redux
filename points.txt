@@ -43,3 +43,10 @@ three-
         -handles unregistering of listeners via the function returned by subscribe(listener)
         
 
+
+@MiddleWare = 
+    -to extend redux functionality
+    -provides a third-party extension between dispatching an action and the moment it reaches the reducer
+    -use middleware for logging,crash reporting, performing asynchronous task
+    
+
